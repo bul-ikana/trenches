@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Trenches</name>
+    <description></description>
+    <version>0.0.1.0</version>
+    <author>Hugo A</author>
+    <author-email>hugo.agmtz@gmail.com</author-email>
+    <author-website>http://bool.netlify.com</author-website>
+    <app-id>mx.bool.trenches</app-id>
+    <unique-id>1nygsyme6e7bd</unique-id>
+    <saved-with-version>25900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>800</width>
+        <height>600</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Low quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Off</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Fish" sid="165992493522994">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="337869246524347" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_26.png">
+                        <collision-poly>
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0" y="0.5" />
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.75" y="0.25" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tilemap" sid="111136590620015">
+            <plugin id="Tilemap" />
+            <texture original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamTileSet.png" />
+            <tiles />
+        </object-type>
+        <object-type name="ChestClosed" sid="847184357352341">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="913058294712386" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamTileSet\miniJamTileSet_144.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.875" y="0.125" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChestOpen" sid="336286348199364">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802216312577917" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamTileSet\miniJamTileSet_145.png">
+                        <collision-poly>
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BubbleBig" sid="797177962943265">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="509370334693304" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_58.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.25" />
+                            <point x="0.75" y="0.5" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BubbleSmall" sid="928500128345882">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="965071721166603" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_59.png">
+                        <collision-poly>
+                            <point x="0.375" y="0.375" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.625" y="0.5" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.625" />
+                            <point x="0.5" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Title" sid="624744803317302">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Player" sid="785262050589899">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="652547609137062" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_01.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.75" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0.125" y="0.875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Start" sid="639089492000468">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Menu.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>MenuEvents.xml</event-sheet>
+    </event-folder>
+    <global-instances />
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
