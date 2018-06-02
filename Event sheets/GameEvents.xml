@@ -10,6 +10,9 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="7" name="Set mirrored" sid="545999525008396" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
                 <action id="-1" name="Set X" sid="760864836380694" type="Player">
                     <param id="0" name="X">Self.X - 32</param>
                 </action>
@@ -22,6 +25,9 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="7" name="Set mirrored" sid="816486293526971" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
                 <action id="-1" name="Set X" sid="133310891020905" type="Player">
                     <param id="0" name="X">Self.X + 32</param>
                 </action>
