@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEvents</name>
+    <events>
+        <event-block sid="903124153766127">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="228654766323596" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="760864836380694" type="Player">
+                    <param id="0" name="X">Self.X - 32</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="787092212769662">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="897933619202600" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="133310891020905" type="Player">
+                    <param id="0" name="X">Self.X + 32</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="468319543286071">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="652880700459240" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="575501254732728" type="Player">
+                    <param id="0" name="Y">Self.Y - 32</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="329405187162345">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="286096134187108" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="354069606291993" type="Player">
+                    <param id="0" name="Y">Self.Y + 32</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
