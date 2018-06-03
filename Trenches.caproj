@@ -21,10 +21,12 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -56,18 +58,36 @@
     <object-folder>
         <object-type name="Fish" sid="165992493522994">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="262600907175190">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="189164911501142">
+                    <behavior id="wrap" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="337869246524347" speed="5">
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="337869246524347" speed="0">
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_26.png">
                         <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.75" y="0.25" />
                             <point x="1" y="0.5" />
                             <point x="0.75" y="0.75" />
                             <point x="0.5" y="0.875" />
                             <point x="0.25" y="0.75" />
                             <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_25.png">
+                        <collision-poly>
                             <point x="0.25" y="0.25" />
-                            <point x="0.5" y="0.125" />
                             <point x="0.75" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -291,23 +311,6 @@
                             <point x="0.75" y="0.75" />
                             <point x="0.5" y="0.875" />
                             <point x="0.25" y="0.75" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="FishGray" sid="222946800453138">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="166819582666847" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_25.png">
-                        <collision-poly>
-                            <point x="0.25" y="0.25" />
-                            <point x="0.75" y="0.25" />
-                            <point x="1" y="0.5" />
-                            <point x="0.75" y="0.75" />
-                            <point x="0.25" y="0.75" />
-                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

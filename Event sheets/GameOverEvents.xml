@@ -62,8 +62,12 @@
                     <param id="0" name="X">7</param>
                     <param id="1" name="Value">&quot;Open chests by standing next to them&quot;</param>
                 </action>
+                <action id="2" name="Set at X" sid="827690532888670" type="Array">
+                    <param id="0" name="X">8</param>
+                    <param id="1" name="Value">&quot;Fishes are just minding their own business&quot;</param>
+                </action>
                 <action id="0" name="Set text" sid="870317751593086" type="Tips">
-                    <param id="0" name="Text">Array.At(int(random(8)))</param>
+                    <param id="0" name="Text">Array.At(int(random(9)))</param>
                 </action>
             </actions>
         </event-block>
