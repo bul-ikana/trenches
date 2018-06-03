@@ -76,10 +76,14 @@
             <texture original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamTileSet.png" />
             <tiles />
         </object-type>
-        <object-type name="ChestClosed" sid="847184357352341">
+        <object-type name="Chest" sid="847184357352341">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="The type of loot inside the chest" name="loot" sid="882827655139682" type="string" />
+                <instance-variable comment="Has the chest already been opened?" name="open" sid="821582084087523" type="boolean" />
+            </instance-variables>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="913058294712386" speed="5">
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="913058294712386" speed="0">
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamTileSet\miniJamTileSet_144.png">
                         <collision-poly>
                             <point x="0.125" y="0.125" />
@@ -91,13 +95,6 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ChestOpen" sid="336286348199364">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802216312577917" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamTileSet\miniJamTileSet_145.png">
                         <collision-poly>
                             <point x="1" y="0.5" />
@@ -245,6 +242,11 @@
         </object-type>
         <object-type name="Coin" sid="171769947367121">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="783391674409243">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="699245244685721" speed="4">
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_35.png">
@@ -304,6 +306,94 @@
                             <point x="0.75" y="0.75" />
                             <point x="0.25" y="0.75" />
                             <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Potion" sid="404604748764723">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="783376159710149">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="328875158558019" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_30.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.875" y="0.125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.125" y="0.875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Gem" sid="115492584359498">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="858147372623102">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="529436345859276" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_34.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.125" />
+                            <point x="0.875" y="0.125" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_34.png">
+                        <collision-poly>
+                            <point x="0.875" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.125" y="0.5" />
+                            <point x="0.125" y="0.125" />
+                            <point x="0.875" y="0.125" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bubbles" sid="429618498338526">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="470399657453811">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="238592465189452" speed="2">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_58.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.25" />
+                            <point x="0.75" y="0.5" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_59.png">
+                        <collision-poly>
+                            <point x="0.375" y="0.375" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.625" y="0.5" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.625" />
+                            <point x="0.5" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

@@ -33,11 +33,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Fish/" />
-        <folder expanded="1" path="animation-folder/ChestClosed/" />
-        <folder expanded="1" path="animation-folder/ChestOpen/" />
+        <folder expanded="1" path="animation-folder/Chest/" />
         <folder expanded="1" path="animation-folder/Bubble/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/Coin/" />
         <folder expanded="1" path="animation-folder/FishGray/" />
+        <folder expanded="1" path="animation-folder/Potion/" />
+        <folder expanded="1" path="animation-folder/Gem/" />
+        <folder expanded="1" path="animation-folder/Bubbles/" />
     </folders-expanded>
 </c2uistate>

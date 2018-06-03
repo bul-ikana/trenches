@@ -26,7 +26,7 @@
                             <param id="2" name="Offset Y">0</param>
                         </condition>
                         <condition id="9" inverted="1" name="Is overlapping at offset" sid="129931084972317" type="Player">
-                            <param id="0" name="Object">ChestClosed</param>
+                            <param id="0" name="Object">Chest</param>
                             <param id="1" name="Offset X">-10</param>
                             <param id="2" name="Offset Y">0</param>
                         </condition>
@@ -55,7 +55,7 @@
                             <param id="2" name="Offset Y">0</param>
                         </condition>
                         <condition id="9" inverted="1" name="Is overlapping at offset" sid="729448500568224" type="Player">
-                            <param id="0" name="Object">ChestClosed</param>
+                            <param id="0" name="Object">Chest</param>
                             <param id="1" name="Offset X">10</param>
                             <param id="2" name="Offset Y">0</param>
                         </condition>
@@ -84,7 +84,7 @@
                             <param id="2" name="Offset Y">-10</param>
                         </condition>
                         <condition id="9" inverted="1" name="Is overlapping at offset" sid="550059438493749" type="Player">
-                            <param id="0" name="Object">ChestClosed</param>
+                            <param id="0" name="Object">Chest</param>
                             <param id="1" name="Offset X">0</param>
                             <param id="2" name="Offset Y">-10</param>
                         </condition>
@@ -110,7 +110,7 @@
                             <param id="2" name="Offset Y">10</param>
                         </condition>
                         <condition id="9" inverted="1" name="Is overlapping at offset" sid="327270243015213" type="Player">
-                            <param id="0" name="Object">ChestClosed</param>
+                            <param id="0" name="Object">Chest</param>
                             <param id="1" name="Offset X">0</param>
                             <param id="2" name="Offset Y">10</param>
                         </condition>
@@ -236,6 +236,160 @@
             <actions>
                 <action behavior="Fade" id="1" name="Start fade" sid="666292829621924" type="Bubble" />
             </actions>
+        </event-block>
+        <event-block sid="471316462213043">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="753223996277325" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="130631593324123" type="System" />
+            </actions>
+        </event-block>
+        <comment>Chest Mechanics</comment>
+        <event-block sid="791019309594665">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="918455618231052" type="Chest">
+                    <param id="0" name="Instance variable">open</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="581323283437018">
+                    <conditions>
+                        <condition id="9" name="Is overlapping at offset" sid="855597740119792" type="Chest">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Offset X">10</param>
+                            <param id="2" name="Offset Y">0</param>
+                        </condition>
+                        <condition id="9" name="Is overlapping at offset" sid="997134810193963" type="Chest">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">10</param>
+                        </condition>
+                        <condition id="9" name="Is overlapping at offset" sid="390659275531999" type="Chest">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Offset X">-10</param>
+                            <param id="2" name="Offset Y">0</param>
+                        </condition>
+                        <condition id="9" name="Is overlapping at offset" sid="643563504901303" type="Chest">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">-10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="316533183391508" type="Chest">
+                            <param id="0" name="Instance variable">open</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="934001954021122" type="Chest">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="703783250927679">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="238553192158129" type="Chest">
+                                    <param id="0" name="Instance variable">loot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;air&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="874996504964626" type="System">
+                                    <param id="0" name="Object to create">Bubbles</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="X">Chest.X</param>
+                                    <param id="3" name="Y">Chest.Y - 32</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="634993147872029" type="Scores">
+                                    <param id="0" name="Instance variable">air</param>
+                                    <param id="1" name="Value">Self.air + 3 &gt; Self.maxAir ? Self.maxAir : Self.air + 3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="867532014501119">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="857251791718596" type="Chest">
+                                    <param id="0" name="Instance variable">loot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;coin&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="455629391048906" type="System">
+                                    <param id="0" name="Object to create">Coin</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="X">Chest.X</param>
+                                    <param id="3" name="Y">Chest.Y - 32</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="101901620477840" type="Coin" />
+                                <action id="-10" name="Set value" sid="757062716071136" type="Scores">
+                                    <param id="0" name="Instance variable">money</param>
+                                    <param id="1" name="Value">Self.money + 5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="108209074033333">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="339783058306783" type="Chest">
+                                    <param id="0" name="Instance variable">loot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;gem&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="607094996585202" type="System">
+                                    <param id="0" name="Object to create">Gem</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="X">Chest.X</param>
+                                    <param id="3" name="Y">Chest.Y - 32</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="701325449348834" type="Scores">
+                                    <param id="0" name="Instance variable">money</param>
+                                    <param id="1" name="Value">Self.money + 10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="113519060020088">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="495771262366505" type="Chest">
+                                    <param id="0" name="Instance variable">loot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;potion&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="148059501251209" type="System">
+                                    <param id="0" name="Object to create">Potion</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="X">Chest.X</param>
+                                    <param id="3" name="Y">Chest.Y - 32</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="348249496684588" type="Scores">
+                                    <param id="0" name="Instance variable">maxAir</param>
+                                    <param id="1" name="Value">Self.maxAir + 5</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="139749865445677" type="Scores">
+                                    <param id="0" name="Instance variable">air</param>
+                                    <param id="1" name="Value">Self.maxAir</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="706720530293393">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="234548108807016" type="Function">
+                            <param id="0" name="Name">&quot;updateScores&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

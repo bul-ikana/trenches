@@ -115,13 +115,17 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ChestClosed" uid="24">
+                <instance type="Chest" uid="24">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <loot>potion</loot>
+                        <open>false</open>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -137,13 +141,17 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ChestClosed" uid="25">
+                <instance type="Chest" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <loot>potion</loot>
+                        <open>false</open>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -235,13 +243,17 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ChestClosed" uid="28">
+                <instance type="Chest" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <loot>potion</loot>
+                        <open>false</open>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
