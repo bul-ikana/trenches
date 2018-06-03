@@ -38,6 +38,12 @@
                         <action id="-1" name="Set X" sid="760864836380694" type="Player">
                             <param id="0" name="X">Self.X - 32</param>
                         </action>
+                        <action id="0" name="Play" sid="186405735245422" type="Audio">
+                            <param id="0" name="Audio file">move</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="137439159830198" type="Function">
                             <param id="0" name="Name">&quot;scoreMove&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -71,6 +77,12 @@
                             <param id="0" name="Name">&quot;scoreMove&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Play" sid="167126733816641" type="Audio">
+                            <param id="0" name="Audio file">move</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="468319543286071">
@@ -92,6 +104,12 @@
                     <actions>
                         <action id="-2" name="Set Y" sid="575501254732728" type="Player">
                             <param id="0" name="Y">Self.Y - 32</param>
+                        </action>
+                        <action id="0" name="Play" sid="440739675550360" type="Audio">
+                            <param id="0" name="Audio file">move</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="889698008257968" type="Function">
                             <param id="0" name="Name">&quot;scoreMove&quot;</param>
@@ -118,6 +136,12 @@
                     <actions>
                         <action id="-2" name="Set Y" sid="354069606291993" type="Player">
                             <param id="0" name="Y">Self.Y + 32</param>
+                        </action>
+                        <action id="0" name="Play" sid="975892217972851" type="Audio">
+                            <param id="0" name="Audio file">move</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="413154998046232" type="Function">
                             <param id="0" name="Name">&quot;scoreMove&quot;</param>
@@ -176,6 +200,12 @@
                         <action id="-10" name="Set value" sid="663238039472659" type="Scores">
                             <param id="0" name="Instance variable">air</param>
                             <param id="1" name="Value">Self.air + 2 &gt; Self.maxAir ? Self.maxAir : Self.air + 2</param>
+                        </action>
+                        <action id="0" name="Play" sid="691512511524769" type="Audio">
+                            <param id="0" name="Audio file">bubble</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -308,6 +338,12 @@
                                     <param id="0" name="Instance variable">air</param>
                                     <param id="1" name="Value">Self.air + 3 &gt; Self.maxAir ? Self.maxAir : Self.air + 3</param>
                                 </action>
+                                <action id="0" name="Play" sid="859572537670142" type="Audio">
+                                    <param id="0" name="Audio file">bubble</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="867532014501119">
@@ -330,6 +366,12 @@
                                     <param id="0" name="Instance variable">money</param>
                                     <param id="1" name="Value">Self.money + 5</param>
                                 </action>
+                                <action id="0" name="Play" sid="832859269060143" type="Audio">
+                                    <param id="0" name="Audio file">coin</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="108209074033333">
@@ -350,6 +392,12 @@
                                 <action id="-10" name="Set value" sid="701325449348834" type="Scores">
                                     <param id="0" name="Instance variable">money</param>
                                     <param id="1" name="Value">Self.money + 10</param>
+                                </action>
+                                <action id="0" name="Play" sid="172044644381475" type="Audio">
+                                    <param id="0" name="Audio file">gem</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -375,6 +423,12 @@
                                 <action id="-10" name="Set value" sid="139749865445677" type="Scores">
                                     <param id="0" name="Instance variable">air</param>
                                     <param id="1" name="Value">Self.maxAir</param>
+                                </action>
+                                <action id="0" name="Play" sid="242910510315101" type="Audio">
+                                    <param id="0" name="Audio file">potion</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
