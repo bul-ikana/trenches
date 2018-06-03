@@ -3,77 +3,207 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvents</name>
     <events>
-        <event-block sid="903124153766127">
+        <comment>Player Mechanics</comment>
+        <comment>Player movement</comment>
+        <event-block sid="204814944543660">
             <conditions>
-                <condition id="0" name="On key pressed" sid="228654766323596" type="Keyboard">
-                    <param id="0" name="Key">37</param>
+                <condition id="-7" name="Compare instance variable" sid="896424272053693" type="Scores">
+                    <param id="0" name="Instance variable">air</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
-                <condition id="9" inverted="1" name="Is overlapping at offset" sid="791347601869262" type="Player">
-                    <param id="0" name="Object">GameCollisionTilemap</param>
-                    <param id="1" name="Offset X">-10</param>
-                    <param id="2" name="Offset Y">0</param>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="903124153766127">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="228654766323596" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="791347601869262" type="Player">
+                            <param id="0" name="Object">GameCollisionTilemap</param>
+                            <param id="1" name="Offset X">-10</param>
+                            <param id="2" name="Offset Y">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="545999525008396" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="760864836380694" type="Player">
+                            <param id="0" name="X">Self.X - 32</param>
+                        </action>
+                        <action id="0" name="Call function" sid="137439159830198" type="Function">
+                            <param id="0" name="Name">&quot;scoreMove&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="787092212769662">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="897933619202600" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="490060697703003" type="Player">
+                            <param id="0" name="Object">GameCollisionTilemap</param>
+                            <param id="1" name="Offset X">10</param>
+                            <param id="2" name="Offset Y">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="816486293526971" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="133310891020905" type="Player">
+                            <param id="0" name="X">Self.X + 32</param>
+                        </action>
+                        <action id="0" name="Call function" sid="496088312465705" type="Function">
+                            <param id="0" name="Name">&quot;scoreMove&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="468319543286071">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="652880700459240" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="404183941428241" type="Player">
+                            <param id="0" name="Object">GameCollisionTilemap</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">-10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="575501254732728" type="Player">
+                            <param id="0" name="Y">Self.Y - 32</param>
+                        </action>
+                        <action id="0" name="Call function" sid="889698008257968" type="Function">
+                            <param id="0" name="Name">&quot;scoreMove&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="329405187162345">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="286096134187108" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="988163274045328" type="Player">
+                            <param id="0" name="Object">GameCollisionTilemap</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="354069606291993" type="Player">
+                            <param id="0" name="Y">Self.Y + 32</param>
+                        </action>
+                        <action id="0" name="Call function" sid="413154998046232" type="Function">
+                            <param id="0" name="Name">&quot;scoreMove&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="371918082621368">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="530886107143147" type="Scores">
+                    <param id="0" name="Instance variable">air</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="545999525008396" type="Player">
-                    <param id="0" name="State">0</param>
+                <action behavior="Fade" id="1" name="Start fade" sid="620056405887155" type="Player" />
+            </actions>
+        </event-block>
+        <comment>Air mechanics</comment>
+        <event-block sid="244958176627657">
+            <conditions>
+                <condition id="0" name="On function" sid="632389538329580" type="Function">
+                    <param id="0" name="Name">&quot;scoreMove&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="546838596583547" type="Scores">
+                    <param id="0" name="Instance variable">moves</param>
+                    <param id="1" name="Value">1</param>
                 </action>
-                <action id="-1" name="Set X" sid="760864836380694" type="Player">
-                    <param id="0" name="X">Self.X - 32</param>
+            </actions>
+            <sub-events>
+                <event-block sid="849625693107676">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="270089587029290" type="Player">
+                            <param id="0" name="Object">GameWaterTilemap</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="777697012483315" type="Scores">
+                            <param id="0" name="Instance variable">air</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="551560806100325">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="906252925486367" type="Player">
+                            <param id="0" name="Object">Bubble</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="663238039472659" type="Scores">
+                            <param id="0" name="Instance variable">air</param>
+                            <param id="1" name="Value">Self.air + 2 &gt; Self.maxAir ? Self.maxAir : Self.air + 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="586580006362637">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="351924386450650" type="Player">
+                            <param id="0" name="Object">GameBackgroundTilemap</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="962864349016461" type="Scores">
+                            <param id="0" name="Instance variable">air</param>
+                            <param id="1" name="Value">Self.air + 1 &gt; Self.maxAir ? Self.maxAir : Self.air + 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="305131370828872">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="757580378279837" type="Function">
+                            <param id="0" name="Name">&quot;updateScores&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Score mechanics</comment>
+        <event-block sid="106169004803583">
+            <conditions>
+                <condition id="0" name="On function" sid="481859348667527" type="Function">
+                    <param id="0" name="Name">&quot;updateScores&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="722065081797057" type="Scores">
+                    <param id="0" name="Text">&quot;Air: &quot; &amp; Self.air &amp; &quot;/&quot; &amp; Self.maxAir &amp; &quot;    $: &quot; &amp; Self.money &amp; &quot;    Mov: &quot; &amp; Self.moves</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="787092212769662">
+        <comment>Screen mechanics</comment>
+        <event-block sid="890668571184657">
             <conditions>
-                <condition id="0" name="On key pressed" sid="897933619202600" type="Keyboard">
-                    <param id="0" name="Key">39</param>
-                </condition>
-                <condition id="9" inverted="1" name="Is overlapping at offset" sid="490060697703003" type="Player">
-                    <param id="0" name="Object">GameCollisionTilemap</param>
-                    <param id="1" name="Offset X">10</param>
-                    <param id="2" name="Offset Y">0</param>
-                </condition>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="710772765939217" type="Player" />
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="816486293526971" type="Player">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="-1" name="Set X" sid="133310891020905" type="Player">
-                    <param id="0" name="X">Self.X + 32</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="468319543286071">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="652880700459240" type="Keyboard">
-                    <param id="0" name="Key">38</param>
-                </condition>
-                <condition id="9" inverted="1" name="Is overlapping at offset" sid="404183941428241" type="Player">
-                    <param id="0" name="Object">GameCollisionTilemap</param>
-                    <param id="1" name="Offset X">0</param>
-                    <param id="2" name="Offset Y">-10</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Set Y" sid="575501254732728" type="Player">
-                    <param id="0" name="Y">Self.Y - 32</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="329405187162345">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="286096134187108" type="Keyboard">
-                    <param id="0" name="Key">40</param>
-                </condition>
-                <condition id="9" inverted="1" name="Is overlapping at offset" sid="988163274045328" type="Player">
-                    <param id="0" name="Object">GameCollisionTilemap</param>
-                    <param id="1" name="Offset X">0</param>
-                    <param id="2" name="Offset Y">10</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Set Y" sid="354069606291993" type="Player">
-                    <param id="0" name="Y">Self.Y + 32</param>
+                <action id="-2" name="Go to layout" sid="859110380077298" type="System">
+                    <param id="0" name="Layout">GameOver</param>
                 </action>
             </actions>
         </event-block>

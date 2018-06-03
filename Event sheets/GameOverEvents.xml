@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>MenuEvents</name>
+    <name>GameOverEvents</name>
     <events>
-        <event-block any="1" sid="291002593696806">
+        <event-block any="1" sid="231660314929330">
             <conditions>
-                <condition id="0" name="On click" sid="607905511413245" type="Mouse">
+                <condition id="0" name="On click" sid="746640085932222" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
                 </condition>
-                <condition id="2" name="Key is down" sid="350889513825713" type="Keyboard">
+                <condition id="2" name="Key is down" sid="283563846053862" type="Keyboard">
                     <param id="0" name="Key">13</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-25" name="Go to layout (by name)" sid="625237779072321" type="System">
+                <action id="-25" name="Go to layout (by name)" sid="407505142660241" type="System">
                     <param id="0" name="Layout">&quot;Game&quot;</param>
                 </action>
             </actions>

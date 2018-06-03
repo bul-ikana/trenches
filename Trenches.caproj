@@ -10,6 +10,7 @@
     <unique-id>1nygsyme6e7bd</unique-id>
     <saved-with-version>25900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -17,6 +18,8 @@
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -106,10 +109,10 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BubbleBig" sid="797177962943265">
+        <object-type name="Bubble" sid="797177962943265">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="509370334693304" speed="5">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="509370334693304" speed="2">
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_58.png">
                         <collision-poly>
                             <point x="0.5" y="0.25" />
@@ -118,14 +121,7 @@
                             <point x="0.25" y="0.5" />
                         </collision-poly>
                     </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BubbleSmall" sid="928500128345882">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="965071721166603" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_59.png">
+                    <frame duration="1" hotspotX="-0.25" hotspotY="-0.25" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_59.png">
                         <collision-poly>
                             <point x="0.375" y="0.375" />
                             <point x="0.5" y="0.25" />
@@ -149,6 +145,9 @@
                 </behavior-type>
                 <behavior-type name="BoundToLayout" sid="171319843761014">
                     <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="164186961013555">
+                    <behavior id="Fade" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -208,19 +207,119 @@
                 </tile>
             </tiles>
         </object-type>
+        <object-type name="Scores" sid="201579980744316">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable comment="Current air" name="air" sid="860024784582046" type="number" />
+                <instance-variable comment="The max number of air available" name="maxAir" sid="195837273089190" type="number" />
+                <instance-variable comment="How much money has been salvaged" name="money" sid="149564075949790" type="number" />
+                <instance-variable comment="How many movements have been done in the game" name="moves" sid="712183034903583" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Anchor" sid="862199663478605">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Function" sid="648350679647457">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="GameWaterTilemap" sid="748431829272574">
+            <plugin id="Tilemap" />
+            <texture original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamTileSet.png" />
+            <tiles>
+                <tile id="60">
+                    <collision-poly>
+                        <point x="1" y="0" />
+                        <point x="1" y="1" />
+                        <point x="0" y="1" />
+                        <point x="0" y="0" />
+                    </collision-poly>
+                </tile>
+            </tiles>
+        </object-type>
+        <object-type name="Coin" sid="171769947367121">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="699245244685721" speed="4">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_35.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_36.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.25" y="0.75" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_37.png">
+                        <collision-poly>
+                            <point x="0.375" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.625" y="0.375" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.375" y="0.625" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_38.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.25" y="0.75" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FishGray" sid="222946800453138">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="166819582666847" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Downloads\mini Jam Tile Sets\MiniJamTileStes\miniJamCharactersAndMisc\miniJamCharactersAndMisc_25.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.75" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Menu.xml</layout>
         <layout>Game.xml</layout>
+        <layout>GameOver.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>MenuEvents.xml</event-sheet>
         <event-sheet>GameEvents.xml</event-sheet>
+        <event-sheet>GameOverEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="11" />
         <global-instance type="Keyboard" uid="14" />
+        <global-instance type="Function" uid="18" />
     </global-instances>
     <sounds-folder />
     <music-folder />
