@@ -440,8 +440,13 @@
         <file name="potion.ogg" />
         <file name="coin.ogg" />
         <file name="gem.ogg" />
+        <file name="lose.ogg" />
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="game.ogg" />
+        <file name="gameover.ogg" />
+        <file name="menu.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

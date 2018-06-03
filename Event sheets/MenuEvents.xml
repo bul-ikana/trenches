@@ -19,5 +19,26 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="883436721269254">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="187668070834528" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="419323600257148" type="Audio">
+                    <param id="0" name="Audio file">menu</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-1</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="327112123649157">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="784448718454637" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="626624322858344" type="Audio" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -19,5 +19,26 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="918446048996388">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="932705697002896" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="542847539155333" type="Audio">
+                    <param id="0" name="Audio file">gameover</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-1</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="272833204209951">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="554528070878611" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="928479050864119" type="Audio" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

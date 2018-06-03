@@ -158,9 +158,22 @@
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="5" inverted="1" name="Is tag playing" sid="394870114012602" type="Audio">
+                    <param id="0" name="Tag">&quot;lose&quot;</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="Fade" id="1" name="Start fade" sid="620056405887155" type="Player" />
+                <action id="33" name="Stop all" sid="335431539230552" type="Audio" />
+                <action id="0" name="Play" sid="770355166652658" type="Audio">
+                    <param id="0" name="Audio file">lose</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;lose&quot;</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="980320458675449" type="Player">
+                    <param id="0" name="Degrees">215</param>
+                </action>
             </actions>
         </event-block>
         <comment>Air mechanics</comment>
@@ -275,6 +288,27 @@
             </conditions>
             <actions>
                 <action id="-26" name="Restart layout" sid="130631593324123" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="533614451690415">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="423037279372846" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="895176811588954" type="Audio">
+                    <param id="0" name="Audio file">game</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-1</param>
+                    <param id="1" name="Tag (optional)">&quot;game&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="748678803465382">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="880054196893211" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="670238777637665" type="Audio" />
             </actions>
         </event-block>
         <comment>Chest Mechanics</comment>
