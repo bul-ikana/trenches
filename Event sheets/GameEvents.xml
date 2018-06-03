@@ -13,6 +13,9 @@
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="5" inverted="1" name="Is tag playing" sid="417137315265500" type="Audio">
+                    <param id="0" name="Tag">&quot;win&quot;</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>
@@ -131,7 +134,7 @@
                         <condition id="9" inverted="1" name="Is overlapping at offset" sid="327270243015213" type="Player">
                             <param id="0" name="Object">Chest</param>
                             <param id="1" name="Offset X">0</param>
-                            <param id="2" name="Offset Y">10</param>
+                            <param id="2" name="Offset Y">30</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -235,22 +238,6 @@
                             <param id="1" name="Value">Self.air + 1 &gt; Self.maxAir ? Self.maxAir : Self.air + 1</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="791395858136405">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="184723696251723" type="System">
-                                    <param id="0" name="Variable">chests</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">20</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="211994754404632" type="System">
-                                    <param id="0" name="Layout">Success</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="305131370828872">
                     <conditions />
@@ -285,6 +272,25 @@
                     <param id="0" name="Variable">chests</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">20</param>
+                </condition>
+                <condition id="5" inverted="1" name="Is tag playing" sid="834046162035484" type="Audio">
+                    <param id="0" name="Tag">&quot;win&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="818560442857180" type="Audio" />
+                <action id="0" name="Play" sid="637849857971662" type="Audio">
+                    <param id="0" name="Audio file">win</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;win&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="104112522319802">
+            <conditions>
+                <condition id="0" name="On ended" sid="198328287903868" type="Audio">
+                    <param id="0" name="Tag">&quot;win&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -440,7 +446,7 @@
                                 <action behavior="Fade" id="1" name="Start fade" sid="101901620477840" type="Coin" />
                                 <action id="-10" name="Set value" sid="757062716071136" type="Scores">
                                     <param id="0" name="Instance variable">money</param>
-                                    <param id="1" name="Value">Self.money + 5</param>
+                                    <param id="1" name="Value">Self.money + 100</param>
                                 </action>
                                 <action id="0" name="Play" sid="832859269060143" type="Audio">
                                     <param id="0" name="Audio file">coin</param>
@@ -467,7 +473,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="701325449348834" type="Scores">
                                     <param id="0" name="Instance variable">money</param>
-                                    <param id="1" name="Value">Self.money + 10</param>
+                                    <param id="1" name="Value">Self.money + 1000</param>
                                 </action>
                                 <action id="0" name="Play" sid="172044644381475" type="Audio">
                                     <param id="0" name="Audio file">gem</param>

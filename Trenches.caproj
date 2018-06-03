@@ -453,6 +453,7 @@
         <file name="coin.ogg" />
         <file name="gem.ogg" />
         <file name="lose.ogg" />
+        <file name="win.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="game.ogg" />
