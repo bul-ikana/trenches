@@ -10,6 +10,7 @@
     <unique-id>1nygsyme6e7bd</unique-id>
     <saved-with-version>25900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -402,6 +403,12 @@
         </object-type>
         <object-type name="Audio" sid="439169339766507">
             <plugin id="Audio" />
+        </object-type>
+        <object-type name="Tips" sid="363559640027173">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="Array" sid="408969929276429">
+            <plugin id="Arr" />
         </object-type>
     </object-folder>
     <families />

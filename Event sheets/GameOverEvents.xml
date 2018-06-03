@@ -30,6 +30,41 @@
                     <param id="3" name="Volume">-1</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="2" name="Set at X" sid="198924160240262" type="Array">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">&quot;Bubbles in water give you extra air to breath&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="971444546262343" type="Array">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Value">&quot;Press ENTER to restart the game anytime&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="834293930412521" type="Array">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Value">&quot;You can recover air by walking on the surface&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="997895092657722" type="Array">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Value">&quot;Potions give you extra air to breath&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="624463532426598" type="Array">
+                    <param id="0" name="X">4</param>
+                    <param id="1" name="Value">&quot;Bubbles in water can be used only once&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="104920336423838" type="Array">
+                    <param id="0" name="X">5</param>
+                    <param id="1" name="Value">&quot;Gems give you more money than coins&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="556795847982056" type="Array">
+                    <param id="0" name="X">6</param>
+                    <param id="1" name="Value">&quot;After you open all chests return to the surface&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="779706492548768" type="Array">
+                    <param id="0" name="X">7</param>
+                    <param id="1" name="Value">&quot;Open chests by standing next to them&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="870317751593086" type="Tips">
+                    <param id="0" name="Text">Array.At(int(random(8)))</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="272833204209951">
