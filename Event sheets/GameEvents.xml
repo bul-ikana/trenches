@@ -370,7 +370,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="634993147872029" type="Scores">
                                     <param id="0" name="Instance variable">air</param>
-                                    <param id="1" name="Value">Self.air + 3 &gt; Self.maxAir ? Self.maxAir : Self.air + 3</param>
+                                    <param id="1" name="Value">Self.air + 6 &gt; Self.maxAir ? Self.maxAir : Self.air + 6</param>
                                 </action>
                                 <action id="0" name="Play" sid="859572537670142" type="Audio">
                                     <param id="0" name="Audio file">bubble</param>
