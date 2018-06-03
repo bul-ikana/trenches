@@ -8,6 +8,11 @@
                 <condition id="0" name="On key pressed" sid="228654766323596" type="Keyboard">
                     <param id="0" name="Key">37</param>
                 </condition>
+                <condition id="9" inverted="1" name="Is overlapping at offset" sid="791347601869262" type="Player">
+                    <param id="0" name="Object">GameCollisionTilemap</param>
+                    <param id="1" name="Offset X">-10</param>
+                    <param id="2" name="Offset Y">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="7" name="Set mirrored" sid="545999525008396" type="Player">
@@ -22,6 +27,11 @@
             <conditions>
                 <condition id="0" name="On key pressed" sid="897933619202600" type="Keyboard">
                     <param id="0" name="Key">39</param>
+                </condition>
+                <condition id="9" inverted="1" name="Is overlapping at offset" sid="490060697703003" type="Player">
+                    <param id="0" name="Object">GameCollisionTilemap</param>
+                    <param id="1" name="Offset X">10</param>
+                    <param id="2" name="Offset Y">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -38,6 +48,11 @@
                 <condition id="0" name="On key pressed" sid="652880700459240" type="Keyboard">
                     <param id="0" name="Key">38</param>
                 </condition>
+                <condition id="9" inverted="1" name="Is overlapping at offset" sid="404183941428241" type="Player">
+                    <param id="0" name="Object">GameCollisionTilemap</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">-10</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Set Y" sid="575501254732728" type="Player">
@@ -49,6 +64,11 @@
             <conditions>
                 <condition id="0" name="On key pressed" sid="286096134187108" type="Keyboard">
                     <param id="0" name="Key">40</param>
+                </condition>
+                <condition id="9" inverted="1" name="Is overlapping at offset" sid="988163274045328" type="Player">
+                    <param id="0" name="Object">GameCollisionTilemap</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">10</param>
                 </condition>
             </conditions>
             <actions>
