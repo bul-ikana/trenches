@@ -419,11 +419,13 @@
         <layout>Menu.xml</layout>
         <layout>Game.xml</layout>
         <layout>GameOver.xml</layout>
+        <layout>Success.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>MenuEvents.xml</event-sheet>
         <event-sheet>GameEvents.xml</event-sheet>
         <event-sheet>GameOverEvents.xml</event-sheet>
+        <event-sheet>SuccessEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="11" />

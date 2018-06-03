@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SuccessEvents</name>
+    <events>
+        <event-block any="1" sid="428264058229392">
+            <conditions>
+                <condition id="0" name="On click" sid="786984893878897" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="108391892878867" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="162115926945062" type="System">
+                    <param id="0" name="Layout">&quot;Game&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="452842930278828">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="437804369815417" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="573522817804005" type="Audio">
+                    <param id="0" name="Audio file">menu</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-1</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="723109600706812">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="473449714543062" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="782483247269751" type="Audio" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

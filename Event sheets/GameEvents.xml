@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvents</name>
     <events>
+        <variable comment="Number of chest open" constant="0" name="chests" sid="878236768993706" static="0" type="number">0</variable>
         <comment>Player Mechanics</comment>
         <comment>Player movement</comment>
         <event-block sid="204814944543660">
@@ -234,6 +235,22 @@
                             <param id="1" name="Value">Self.air + 1 &gt; Self.maxAir ? Self.maxAir : Self.air + 1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="791395858136405">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="184723696251723" type="System">
+                                    <param id="0" name="Variable">chests</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="211994754404632" type="System">
+                                    <param id="0" name="Layout">Success</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="305131370828872">
                     <conditions />
@@ -256,6 +273,23 @@
             <actions>
                 <action id="0" name="Set text" sid="722065081797057" type="Scores">
                     <param id="0" name="Text">&quot;Air: &quot; &amp; Self.air &amp; &quot;/&quot; &amp; Self.maxAir &amp; &quot;    $: &quot; &amp; Self.money &amp; &quot;    Mov: &quot; &amp; Self.moves</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="140858864427186">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="384039517756140" type="Player">
+                    <param id="0" name="Object">GameBackgroundTilemap</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="155102211319279" type="System">
+                    <param id="0" name="Variable">chests</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="401549384777255" type="System">
+                    <param id="0" name="Layout">Success</param>
                 </action>
             </actions>
         </event-block>
@@ -300,6 +334,10 @@
                     <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">-1</param>
                     <param id="1" name="Tag (optional)">&quot;game&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="583767046093596" type="System">
+                    <param id="0" name="Variable">chests</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -350,6 +388,10 @@
                         </action>
                         <action id="5" name="Set frame" sid="934001954021122" type="Chest">
                             <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="234684527262950" type="System">
+                            <param id="0" name="Variable">chests</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                     <sub-events>
